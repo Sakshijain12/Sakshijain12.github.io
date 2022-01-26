@@ -20,9 +20,9 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact</h2>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+        <form onSubmit={handleSubmit} action = "https://formsubmit.co/jainsakshi2019@gmail.com" method="POST">
+          <input type="email" name = "email" placeholder="Email" required/>
+          <textarea type="text" name="email" placeholder="Message" required></textarea>
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>

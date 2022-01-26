@@ -22,7 +22,7 @@ export default function Works() {
       desc: "My portfolio website using ReactJs, Javascript, SCSS",
       image: "https://blog-frontend.envato.com/cdn-cgi/image/width=1200,quality=85,format=auto/uploads/2020/06/SOC101_Portfolio_Guide.png",
       type : "Project",
-      link : "",
+      link : "https://sakshijain12.github.io/",
     },
     {
       id: "3",

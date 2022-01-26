@@ -16,15 +16,14 @@
 
         @include mobile{
             transform: rotate(90deg);
-            font-size: 5vh;
-            left: 6%;
+            font-size: 8vw;
+            left: 5vw;
         }
     }
 
     .arrow{
         height: 500px;
-        position: absolute;
-        
+        position: absolute;      
         cursor: pointer;
 
         @include mobile {
