@@ -8,7 +8,7 @@ export default function topbar({ menuOpen , setMenuOpen }) {
     <div className='wrapper'>
       <div className='left'>
         <a href="#intro" className="logo">
-            Home
+            Sakshi Jain
         </a>       
         <div className='itemContainer'>
           <img src='https://toppng.com/uploads/preview/email-icon-vector-circle-11549825158ieiklzfl8g.png' className='icon' />

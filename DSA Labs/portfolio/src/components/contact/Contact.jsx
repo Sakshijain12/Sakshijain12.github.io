@@ -1,14 +1,13 @@
-import { useState } from "react";
 import "./contact.scss";
-
+import emailjs, { send } from 'emailjs-com'
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
-
-  const handleSubmit = (e) => {
+  function sendEmail(e){
     e.preventDefault();
-    setMessage(true);
-  };
+    emailjs.sendForm('service_s8xyvn1', 'template_2j9z5ga', e.target, 'user_PiGNcQrQSjTY5mxA6ZI5d').then(res=>{
+      console.log(res);
+    }).catch(err=> console.log(err));
+  }
   return (
     <div className="contact" id="contact">
       <div className="left">
@@ -20,11 +19,11 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact</h2>
-        <form onSubmit={handleSubmit} action = "https://formsubmit.co/jainsakshi2019@gmail.com" method="POST">
-          <input type="email" name = "email" placeholder="Email" required/>
-          <textarea type="text" name="email" placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
+        <form onSubmit={sendEmail} id = {"myform"} >
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name = "email" placeholder="Email" />
+          <textarea type="text" name="msg" placeholder="Message"></textarea>
+          <button type="submit" >Send</button>
         </form>
       </div>
     </div>
